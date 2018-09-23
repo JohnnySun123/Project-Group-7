@@ -9,7 +9,7 @@
 import UIKit
 import CloudKit
 class MainMenuViewController: UIViewController{
-    @IBOutlet weak var SeachBar: UISearchBar!
+    @IBOutlet weak var SearchByFilename: UIButton!
     
-    
+    @IBOutlet weak var LogoutButton: UIButton!
 }
