@@ -12,6 +12,15 @@ import CloudKit
 class SignUpPageViewController: UIViewController {
     @IBOutlet weak var ReturnHomeButton: UIButton!
 
-    
+    @IBOutlet weak var Username: UITextField!
+    @IBOutlet weak var Password: UITextField!
+    @IBAction func SignUp(_ sender: UIButton) {
+        if !(Username.text?.isEmpty)! && !(Password.text?.isEmpty)!{
+            UserProfileRecord.setValue(Username.text!, forKey: Password.text!)
+        }
+        else{
+            
+        }
+    }
     
 }

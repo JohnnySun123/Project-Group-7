@@ -8,7 +8,7 @@
 
 import UIKit
 import CloudKit
-
+var UserProfileRecord = CKRecord(recordType: "UserProfile")
 class ViewController: UIViewController {
     
     
@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var LoginButton: UIButton!
     @IBOutlet weak var SignUpButton: UIButton!
     
-    var UserProfileRecord = CKRecord(recordType: "UserProfile")
+   
     override func viewDidLoad() {
         UserProfileRecord.setValue("Johnny", forKey: "Admin1")
         UserProfileRecord.setValue("Kevin", forKey: "Admin2")
