@@ -26,6 +26,9 @@
                                 <state key="normal" title="Login">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="Login:" destination="BYZ-38-t0r" eventType="touchUpInside" id="a6d-53-t1x"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7AQ-SV-NvG">
                                 <rect key="frame" x="139" y="146" width="97" height="30"/>
@@ -79,7 +82,10 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="LoginButton" destination="kgF-wD-zIz" id="RBD-uU-8q1"/>
+                        <outlet property="PasswordInput" destination="9JA-DV-NrA" id="xfq-OB-F9c"/>
                         <outlet property="SignUpButton" destination="sk8-Gv-seo" id="QvN-BB-gg1"/>
+                        <outlet property="UserInput" destination="7AQ-SV-NvG" id="lb6-uL-smZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
