@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B44D156216AFA1D00C07456 /* SearchFileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B44D155216AFA1D00C07456 /* SearchFileView.swift */; };
+		9B44D158216BD8A300C07456 /* Candies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B44D157216BD8A300C07456 /* Candies.swift */; };
 		9B4FBC62215301A300A18653 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4FBC61215301A300A18653 /* AppDelegate.swift */; };
 		9B4FBC64215301A300A18653 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4FBC63215301A300A18653 /* ViewController.swift */; };
 		9B4FBC67215301A300A18653 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B4FBC65215301A300A18653 /* Main.storyboard */; };
@@ -20,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9B44D155216AFA1D00C07456 /* SearchFileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFileView.swift; sourceTree = "<group>"; };
+		9B44D157216BD8A300C07456 /* Candies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Candies.swift; sourceTree = "<group>"; };
 		9B4FBC5E215301A300A18653 /* Project Group 7.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Project Group 7.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B4FBC61215301A300A18653 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9B4FBC63215301A300A18653 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -67,6 +71,8 @@
 		9B4FBC60215301A300A18653 /* Project Group 7 */ = {
 			isa = PBXGroup;
 			children = (
+				9B44D155216AFA1D00C07456 /* SearchFileView.swift */,
+				9B44D157216BD8A300C07456 /* Candies.swift */,
 				9B4FBC812155947900A18653 /* MainMenuViewController.swift */,
 				9B4FBC7B21531C0000A18653 /* SIgnUpPage.storyboard */,
 				9B4FBC73215301BE00A18653 /* Project Group 7.entitlements */,
@@ -172,7 +178,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B4FBC822155947900A18653 /* MainMenuViewController.swift in Sources */,
+				9B44D158216BD8A300C07456 /* Candies.swift in Sources */,
 				9B4FBC7E21531D3200A18653 /* SignUpPageViewController.swift in Sources */,
+				9B44D156216AFA1D00C07456 /* SearchFileView.swift in Sources */,
 				9B4FBC64215301A300A18653 /* ViewController.swift in Sources */,
 				9B4FBC62215301A300A18653 /* AppDelegate.swift in Sources */,
 			);
