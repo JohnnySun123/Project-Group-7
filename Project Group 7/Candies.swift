@@ -7,9 +7,9 @@
 //
 
 import Foundation
-struct Candies{
-    let type: String
-    let Name: String
+class Candies{
+    var type: String?
+    var Name: String?
     init(categories: String, name: String){
        type=categories
         Name=name

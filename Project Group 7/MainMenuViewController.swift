@@ -11,6 +11,7 @@ import CloudKit
 class MainMenuViewController: UIViewController{
     @IBOutlet weak var SearchByFilename: UIButton!
     
+    @IBOutlet weak var MainMenuLabel: UILabel!
     @IBOutlet weak var LogoutButton: UIButton!
 
     

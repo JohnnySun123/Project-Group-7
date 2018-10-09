@@ -32,9 +32,7 @@ class ViewController: UIViewController {
             var X:String = UserProfileRecord.value(forKey: P_check) as! String
             if X == U_check{
                     print("match")
-                let storyboard = UIStoryboard(name: "MainMenu", bundle: nil)
-                let vc = storyboard.instantiateViewController(withIdentifier: "MainMenu") as UIViewController
-                present(vc, animated: true, completion: nil)
+                self.performSegue( withIdentifier: "ToMain", sender: self)
                 }
             else{
                 print("Wrong combo")

@@ -10,63 +10,84 @@ import UIKit
 import CloudKit
 
 class SearchFileView: UITableViewController {
-    let Titles = ["Chocolate", "Gummy", "Candy"]
-    let Chocolate = ["Milk Chocolate","Dark Chocolate","Caramel Chocolate","White Chocolate","Hershey Cookie & Cream", "M&Ms"]
-    let Gummy = ["Sour Gummy Warms", "Peach Gummy Rings","Gummy Bears", "Sour Kids"]
-    let Candy = ["Sour Drops", "StarBurst", "Air Heads", "Laffy Taffy", "Warheads", "Skittles","Jolly Ranchers"]
+
+
   
+let searchController = UISearchController(searchResultsController: nil)
     @IBOutlet weak var SearchBar: UISearchBar!
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource=self
         tableView.delegate=self
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "CustomCell")
+        // Setup the Search Controller
+        searchController.searchResultsUpdater = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        navigationItem.searchController = searchController
+        definesPresentationContext = true
     }
-    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-            return Titles[section]
-    }
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return Titles.count
-    }
+    
+    var FilteredData = [Candies]()
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        switch section {
-        case 0:
-            return Chocolate.count
-        case 1:
-            return Gummy.count
-        case 2:
-            return Candy.count
-        default:
-            return 0
+        if isFiltering(){
+            print("filtering")
+            return FilteredData.count
         }
+        print("not filtering")
+        return Inventory.count
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath)-> UITableViewCell{
         let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCell", for: indexPath)
-        switch indexPath.section{
-            case 0:
-            cell.textLabel?.text=Chocolate[indexPath.row]
-            break
-        case 1:
-            cell.textLabel?.text=Gummy[indexPath.row]
-            break
-        case 2:
-            cell.textLabel?.text=Candy[indexPath.row]
-            break
-        default:
-            break
+        let candy: Candies
+        if isFiltering(){
+            candy = FilteredData[indexPath.row]
+        }else{
+            candy = Inventory[indexPath.row]
         }
+        cell.textLabel!.text=candy.Name
+        cell.detailTextLabel!.text=candy.type
         return cell
     }
-    func searchBar(_ searchBar: UISearchBar, textChange searchText: String){
-        if searchText.isEmpty{
-            
-        }
-        else{
-        }
-        //refresh view
+    
+    
+    func isFiltering() -> Bool {
+        return searchController.isActive && !SearchBarEmpty()
+    }
+    func SearchBarEmpty() -> Bool {
+        return (searchController.searchBar.text?.isEmpty) ?? true
     }
     
+    func filterContentForSearchText(_ searchText: String, scope: String = "All"){
+        FilteredData = Inventory.filter({( candy: Candies)-> Bool in
+            return (candy.Name?.lowercased().contains(searchText.lowercased()))!
+        })
+        tableView.reloadData()
+    }
+    
+    let Inventory = [
+        Candies(categories: "Chocolate", name: "Milk Chocolate"),
+        Candies(categories: "Chocolate", name: "Dark Chocolate"),
+        Candies(categories: "Chocolate", name: "Caramel Chocolate"),
+        Candies(categories: "Chocolate", name: "White Chocolate"),
+        Candies(categories: "Chocolate", name: "Hershey Cookie & Cream"),
+        Candies(categories: "Chocolate", name: "M&Ms"),
+        Candies(categories: "Gummy", name: "Sour Gummy Warms"),
+        Candies(categories: "Gummy", name: "Peach Gummy Rings"),
+        Candies(categories: "Gummy", name: "Gummy Bears"),
+        Candies(categories: "Gummy", name: "Sour Kids"),
+        Candies(categories: "Candy", name: "Sour Drops"),
+        Candies(categories: "Candy", name: "StarBurst"),
+        Candies(categories: "Candy", name: "Air Heads"),
+        Candies(categories: "Candy", name: "Laffy Taffy"),
+        Candies(categories: "Candy", name: "Warheads"),
+        Candies(categories: "Candy", name: "Skittles"),
+        Candies(categories: "Candy", name: "Jolly Ranchers")
+    ]
+   
+}
+extension SearchFileView: UISearchResultsUpdating{
+    func updateSearchResults(for searchController: UISearchController) {
+        filterContentForSearchText(searchController.searchBar.text!)
+    }
     
     
 }

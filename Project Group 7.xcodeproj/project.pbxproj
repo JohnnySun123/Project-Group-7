@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		9B44D156216AFA1D00C07456 /* SearchFileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B44D155216AFA1D00C07456 /* SearchFileView.swift */; };
 		9B44D158216BD8A300C07456 /* Candies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B44D157216BD8A300C07456 /* Candies.swift */; };
+		9B44D15C216CA10600C07456 /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B44D15B216CA10600C07456 /* UploadViewController.swift */; };
+		9B44D15E216CA16900C07456 /* ItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B44D15D216CA16900C07456 /* ItemDetailViewController.swift */; };
+		9B44D160216CA2A600C07456 /* SettingMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B44D15F216CA2A600C07456 /* SettingMenuViewController.swift */; };
 		9B4FBC62215301A300A18653 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4FBC61215301A300A18653 /* AppDelegate.swift */; };
 		9B4FBC64215301A300A18653 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4FBC63215301A300A18653 /* ViewController.swift */; };
 		9B4FBC67215301A300A18653 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B4FBC65215301A300A18653 /* Main.storyboard */; };
@@ -17,13 +20,15 @@
 		9B4FBC76215301C300A18653 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B4FBC75215301C300A18653 /* CloudKit.framework */; };
 		9B4FBC7C21531C0000A18653 /* SIgnUpPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B4FBC7B21531C0000A18653 /* SIgnUpPage.storyboard */; };
 		9B4FBC7E21531D3200A18653 /* SignUpPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4FBC7D21531D3200A18653 /* SignUpPageViewController.swift */; };
-		9B4FBC802155933B00A18653 /* MainMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B4FBC7F2155933B00A18653 /* MainMenu.storyboard */; };
 		9B4FBC822155947900A18653 /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4FBC812155947900A18653 /* MainMenuViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		9B44D155216AFA1D00C07456 /* SearchFileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFileView.swift; sourceTree = "<group>"; };
 		9B44D157216BD8A300C07456 /* Candies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Candies.swift; sourceTree = "<group>"; };
+		9B44D15B216CA10600C07456 /* UploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
+		9B44D15D216CA16900C07456 /* ItemDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailViewController.swift; sourceTree = "<group>"; };
+		9B44D15F216CA2A600C07456 /* SettingMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingMenuViewController.swift; sourceTree = "<group>"; };
 		9B4FBC5E215301A300A18653 /* Project Group 7.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Project Group 7.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B4FBC61215301A300A18653 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9B4FBC63215301A300A18653 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -35,7 +40,6 @@
 		9B4FBC75215301C300A18653 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		9B4FBC7B21531C0000A18653 /* SIgnUpPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SIgnUpPage.storyboard; sourceTree = "<group>"; };
 		9B4FBC7D21531D3200A18653 /* SignUpPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPageViewController.swift; sourceTree = "<group>"; };
-		9B4FBC7F2155933B00A18653 /* MainMenu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainMenu.storyboard; sourceTree = "<group>"; };
 		9B4FBC812155947900A18653 /* MainMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -54,6 +58,9 @@
 		9B4FBC55215301A300A18653 = {
 			isa = PBXGroup;
 			children = (
+				9B44D15F216CA2A600C07456 /* SettingMenuViewController.swift */,
+				9B44D15B216CA10600C07456 /* UploadViewController.swift */,
+				9B44D15D216CA16900C07456 /* ItemDetailViewController.swift */,
 				9B4FBC60215301A300A18653 /* Project Group 7 */,
 				9B4FBC5F215301A300A18653 /* Products */,
 				9B4FBC74215301C300A18653 /* Frameworks */,
@@ -79,7 +86,6 @@
 				9B4FBC61215301A300A18653 /* AppDelegate.swift */,
 				9B4FBC63215301A300A18653 /* ViewController.swift */,
 				9B4FBC7D21531D3200A18653 /* SignUpPageViewController.swift */,
-				9B4FBC7F2155933B00A18653 /* MainMenu.storyboard */,
 				9B4FBC65215301A300A18653 /* Main.storyboard */,
 				9B4FBC68215301A600A18653 /* Assets.xcassets */,
 				9B4FBC6A215301A600A18653 /* LaunchScreen.storyboard */,
@@ -162,7 +168,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9B4FBC802155933B00A18653 /* MainMenu.storyboard in Resources */,
 				9B4FBC6C215301A600A18653 /* LaunchScreen.storyboard in Resources */,
 				9B4FBC69215301A600A18653 /* Assets.xcassets in Resources */,
 				9B4FBC67215301A300A18653 /* Main.storyboard in Resources */,
@@ -178,6 +183,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B4FBC822155947900A18653 /* MainMenuViewController.swift in Sources */,
+				9B44D15C216CA10600C07456 /* UploadViewController.swift in Sources */,
+				9B44D15E216CA16900C07456 /* ItemDetailViewController.swift in Sources */,
+				9B44D160216CA2A600C07456 /* SettingMenuViewController.swift in Sources */,
 				9B44D158216BD8A300C07456 /* Candies.swift in Sources */,
 				9B4FBC7E21531D3200A18653 /* SignUpPageViewController.swift in Sources */,
 				9B44D156216AFA1D00C07456 /* SearchFileView.swift in Sources */,
